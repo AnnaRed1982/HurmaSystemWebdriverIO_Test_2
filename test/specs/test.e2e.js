@@ -56,10 +56,10 @@ describe("tarriffs page test", () => {
         //   await spanPriceValueText.isEqual("445.5");
         //   break;
 
-        // case 7:
-        //   // spanPriceValueText.isEqual("Зв'яжіться з нами для розрахунку");
-        //   console.log("Invalid select option");
-        //   break;
+        case 7:
+          // spanPriceValueText.isEqual("Зв'яжіться з нами для розрахунку");
+     
+          break;
 
         default:
           console.log("Invalid select option");
