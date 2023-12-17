@@ -3,8 +3,10 @@ const TariffsPage = require("../pageobjects/tariffs.page");
 // const LoginPage = require('../pageobjects/login.page')
 // const SecurePage = require('../pageobjects/secure.page')
 
-// async function priceOnChangeWorkersQuant() {
-//   await (await $(".tariff-card.primary").$(".price-value")).getText();
+// async function priceOnChangeWorkersQuant(equal) {
+//   expect(
+//     await (await $(".tariff-card.primary").$(".price-value")).getText()
+//   ).toEqual(equal);
 // }
 
 describe("tarriffs page test", () => {
@@ -22,51 +24,61 @@ describe("tarriffs page test", () => {
 
       switch (i) {
         case 0:
-          //   expect(priceOnChangeWorkersQuant()).toEqual("103.5");
           expect(
             await (await $(".tariff-card.primary").$(".price-value")).getText()
           ).toEqual("103.5");
           break;
 
-        // case 1:
-        //   expect(
-        //     await (await $(".tariff-card.primary").$(".price-value")).getText()
-        //   ).toEqual("157.5");
-        //   break;
+        case 1:
+          expect(
+            await (await $(".tariff-card.primary").$(".price-value")).getText()
+          ).toEqual("157.5");
+          break;
 
-        // case 2:
-        //   expect(
-        //     await (await $(".tariff-card.primary").$(".price-value")).getText()
-        //   ).toEqual("220.5");
-        //   break;
+        case 2:
+          expect(
+            await (await $(".tariff-card.primary").$(".price-value")).getText()
+          ).toEqual("220.5");
+          break;
 
-        // case 3:
-        //   await spanPriceValueText.isEqual("283.5");
-        //   break;
+        case 3:
+          expect(
+            await (await $(".tariff-card.primary").$(".price-value")).getText()
+          ).toEqual("283.5");
+          break;
 
-        // case 4:
-        //   await spanPriceValueText.isEqual("310.5");
-        //   break;
+        case 4:
+          expect(
+            await (await $(".tariff-card.primary").$(".price-value")).getText()
+          ).toEqual("310.5");
+          break;
 
-        // case 5:
-        //   await spanPriceValueText.isEqual("378");
-        //   break;
+        case 5:
+          expect(
+            await (await $(".tariff-card.primary").$(".price-value")).getText()
+          ).toEqual("378");
+          break;
 
-        // case 6:
-        //   await spanPriceValueText.isEqual("445.5");
-        //   break;
+        case 6:
+          expect(
+            await (await $(".tariff-card.primary").$(".price-value")).getText()
+          ).toEqual("445.5");
+          break;
 
         case 7:
-          // spanPriceValueText.isEqual("Зв'яжіться з нами для розрахунку");
-     
+          expect(
+            await (
+              await $(".tariff-card.primary")
+                .$(".individual-price")
+                .$(".price-title")
+            ).getText()
+          ).toEqual("Індивідуальна ціна");
           break;
 
         default:
           console.log("Invalid select option");
       }
     }
-
-    // console.log("select--------------->", select);
 
     // await LoginPage.login('tomsmith', 'SuperSecretPassword!')
     // await expect(SecurePage.flashAlert).toBeExisting()
