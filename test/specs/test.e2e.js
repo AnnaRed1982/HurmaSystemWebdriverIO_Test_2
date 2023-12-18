@@ -95,19 +95,31 @@ describe("tarriffs page test", () => {
       switch (i) {
         case 0:
           expect(
-            await (await $(".price-per-month").$(".currency")).getText()
+            await (
+              await $(".tariff-card.primary")
+                .$(".price-per-month")
+                .$(".currency")
+            ).getText()
           ).toEqual("€");
           break;
 
         case 1:
           expect(
-            await (await $(".price-per-month").$(".currency")).getText()
+            await (
+              await $(".tariff-card.primary")
+                .$(".price-per-month")
+                .$(".currency")
+            ).getText()
           ).toEqual("$");
           break;
 
         case 2:
           expect(
-            await (await $(".price-per-month").$(".currency")).getText()
+            await (
+              await $(".tariff-card.primary")
+                .$(".price-per-month")
+                .$(".currency")
+            ).getText()
           ).toEqual("₴");
           break;
 
@@ -120,7 +132,7 @@ describe("tarriffs page test", () => {
   // 3 TEST
   ///////////////////////////////////////////////////////////////////////
   ///////////////////////////////////////////////////////////////////////
-  it("Period control check", async () => {
+  it("Period check", async () => {
     await TariffsPage.open();
 
     //start page
